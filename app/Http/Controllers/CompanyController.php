@@ -55,7 +55,8 @@ class CompanyController extends AppBaseController
 
         $company = $this->companyRepository->create($input);
 
-        Flash::success('Company saved successfully.');
+        //Flash::success('Company saved successfully.');
+        flash()->overlay( 'Company Added successfully!', 'Awesome!');
 
         return redirect(route('companies.index'));
     }
@@ -76,6 +77,7 @@ class CompanyController extends AppBaseController
 
             return redirect(route('companies.index'));
         }
+        flash()->overlay( 'Great the Company is updated!', 'Awesome!');
 
         return view('companies.show')->with('company', $company);
     }
@@ -89,6 +91,7 @@ class CompanyController extends AppBaseController
      */
     public function edit($id)
     {
+        
         $company = $this->companyRepository->findWithoutFail($id);
 
         if (empty($company)) {
@@ -120,7 +123,8 @@ class CompanyController extends AppBaseController
 
         $company = $this->companyRepository->update($request->all(), $id);
 
-        Flash::success('Company updated successfully.');
+        //Flash::success('Company updated succesfully');
+        flash()->overlay( 'Great the Company is updated!', 'Awesome!');
 
         return redirect(route('companies.index'));
     }
@@ -144,7 +148,8 @@ class CompanyController extends AppBaseController
 
         $this->companyRepository->delete($id);
 
-        Flash::success('Company deleted successfully.');
+        //Flash::success('Company deleted successfully.');
+        flash()->overlay( 'Alright the company is gone', 'Confirmed!');
 
         return redirect(route('companies.index'));
     }

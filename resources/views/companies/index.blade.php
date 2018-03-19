@@ -13,3 +13,4 @@
         @include('companies.table')
         
 @endsection
+
