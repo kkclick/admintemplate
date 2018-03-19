@@ -40,6 +40,8 @@ class CompanyController extends AppBaseController
     public function create()
     {
         return view('companies.create');
+
+        return redirect(route('companies.index'));
     }
 
     /**
@@ -77,7 +79,6 @@ class CompanyController extends AppBaseController
 
             return redirect(route('companies.index'));
         }
-        flash()->overlay( 'Great the Company is updated!', 'Awesome!');
 
         return view('companies.show')->with('company', $company);
     }

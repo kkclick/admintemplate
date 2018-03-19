@@ -8,9 +8,9 @@
             </div>
 
             <div class="modal-body">
-                <p>{!! $body !!}</p>
+                    {{  $body  }}
             </div>
-        
+
 
 
             <div class="modal-footer">

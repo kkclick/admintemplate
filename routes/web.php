@@ -24,8 +24,6 @@ Route::resource('employees', 'EmployeeController');
 
 Auth::routes();
 
-Route::get('/home', 'HomeController@index');
-
 Route::resource('leaveClaims', 'LeaveClaimController');
 
 Route::resource('companies', 'CompanyController');
