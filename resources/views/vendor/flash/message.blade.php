@@ -25,4 +25,3 @@
 @endforeach
 
 {{ session()->forget('flash_notification') }}
-© 2018 GitHub, Inc.

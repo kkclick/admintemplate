@@ -44,7 +44,7 @@ class CompanyDataTable extends DataTable
             ->minifiedAjax()
             ->addAction(['width' => '80px'])
             ->parameters([
-                'dom'     => 'Bfrtip',
+                'dom'     => 'lfrtip',
                 'order'   => [[0, 'desc']],
                 'buttons' => [
                     'create',
